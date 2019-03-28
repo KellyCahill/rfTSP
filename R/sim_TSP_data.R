@@ -3,7 +3,6 @@
 
 
 simu.multi <- function(Gnull, Gsig, Ntrain, Ntest, SDgenemu=5, DFgenesd=1, Clow=2, Cup=Inf, MuShift=3, SDshift=0.5,seed=15213, label = c(-1,1)){
-  library(truncnorm)
   ### input
   # Gnull - number of null genes
   # Gsig - number of significant genes
