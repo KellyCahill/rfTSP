@@ -7,12 +7,12 @@
  data_transform(data, tsp)
  } 
  \arguments{
- \item{list1}{data- training or testing data, gene by sample} 
- \item{list2}{tsp - object out from getKtsp function} 
+ \item{data}{training or testing data, gene by sample} 
+ \item{tsp}{object out from getKtsp function} 
  } 
  
  \value{ 
-\item{transformed data matrix}{ ready for input into random forest containing 0 and 1 values, sample by pair} 
+\item{data frame}{transposed data frame ready for input into random forest containing 0 and 1 values, sample by pair} 
 } 
 
 \description{
