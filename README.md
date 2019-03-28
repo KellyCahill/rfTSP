@@ -14,6 +14,7 @@ This is an R package for robust binary/multi classification and feature selectio
 ```R 
 library(devtools) 
 install_github("KellyCahill/rfTSP") 
+library(rfTSP)
 ```
 
 # Example 
