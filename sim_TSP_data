@@ -2,7 +2,7 @@
 ### simulate the data follow a certain distribution, so that truth is known
 
 
-simu.multi <- function(Gnull, Gsig, Ntrain, Ntest, SDgenemu=5, DFgenesd=1, Clow=2, Cup=Inf, MuShift=3, SDshift=0.5,seed=15213){
+simu.multi <- function(Gnull, Gsig, Ntrain, Ntest, SDgenemu=5, DFgenesd=1, Clow=2, Cup=Inf, MuShift=3, SDshift=0.5,seed=15213, label = c(-1,1)){
   library(truncnorm)
   ### input
   # Gnull - number of null genes
@@ -16,6 +16,7 @@ simu.multi <- function(Gnull, Gsig, Ntrain, Ntest, SDgenemu=5, DFgenesd=1, Clow=
   # MuShift - test shift mean value
   # SDshift - test shift SD value
   # seed - seed for random number
+  # label - Class label (-1,1) for binary and (-1,0,1) for multi
   
   ### output
   # Xtrain - training expression table, gene by sample
@@ -79,7 +80,7 @@ simu.multi <- function(Gnull, Gsig, Ntrain, Ntest, SDgenemu=5, DFgenesd=1, Clow=
   direction=matrix(0,nrow=Gsig,ncol=K)  # showing the gene direction for each outcome category
   for(i in 1:Gsig){
     while(length(unique(direction[i,]))==1){  # not the sample direction
-      direction[i,]=sample(c(-1,1),size=K,replace=T)
+      direction[i,]=sample(label,size=K,replace=T)
     }
     
     for(j in 1:K){
