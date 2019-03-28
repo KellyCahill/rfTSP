@@ -1,9 +1,9 @@
 #binomial 2 prop test 
-#ind is pair index (see TSP selection code)
-binom.p.dist<-function(j, data, subjects, controls, case, ind){
+#returns p-value strength of pair
+binom.p.dist<-function(j, data, N, controls, case, ind){
   p.control<-c()
   p.case<-c()   
-  for(i in 1:length(subjects)){
+  for(i in 1:N){
     
     p.control[i]<- data[as.numeric(ind[j,1]), controls[i]] >= data[as.numeric(ind[j,2]), controls[i]]
     p.case[i]<- data[as.numeric(ind[j,1]), case[i]] > data[as.numeric(ind[j,2]), case[i]]
@@ -21,7 +21,6 @@ binom.p.dist<-function(j, data, subjects, controls, case, ind){
   } else {
     
     bin.test<-prop.test(x= table, alternative = "two.sided", conf.level = .95)
-    ##I believe this is doing the exact test. You can check the prop.test for approx normal
     p.value<-bin.test$p.value
   }
   
