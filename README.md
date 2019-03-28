@@ -1,6 +1,6 @@
 # rfTSP
 
-This is an R package for robust binary/multi classification and feature selection in gene expression profiles.
+This is an R package for robust binary/multi classification and feature selection using gene expression profiles.
 
 # Required packages
 * library(randomForest)
