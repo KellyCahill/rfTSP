@@ -18,3 +18,7 @@
 \description{
 A function that dichotomizes an expression matrix into 0 and 1 values, according to the observed TSP pattern
 } 
+
+\author{ 
+Kelly Cahill, Masaki Lin, Silvia Liu 
+}
