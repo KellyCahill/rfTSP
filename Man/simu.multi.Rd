@@ -33,3 +33,8 @@ MuShift, SDshift = 0, SDshift = 0.5, seed = 15232, label = c(-1,1))
 \description{
 A function for generating simulated gene expression data
 }
+    
+\author{ 
+Kelly Cahill, Masaki Lin, Silvia Liu 
+}
+
