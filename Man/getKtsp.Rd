@@ -19,3 +19,7 @@ getKtsp(train, Y, k)
  \description{ 
  A function that to rank pairs of genes to return the top k pairs of genes
  }
+
+\author{ 
+Kelly Cahill, Masaki Lin, Silvia Liu 
+}
