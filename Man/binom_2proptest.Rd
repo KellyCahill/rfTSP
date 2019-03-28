@@ -8,7 +8,7 @@
 binom_2proptest(j, train, N, controls, case, ind) 
 } 
 \arguments{ 
-\item{ind}(a matrix consisting of 2 columns and p rows of gene pairs for all gene pairs, not just those returned by getKtsp.} 
+\item{ind}{a matrix consisting of 2 columns and p rows of gene pairs for all gene pairs, not just those returned by getKtsp.} 
 \item{j}{the gene pair index for the pair for a p-value to be calculated. Will be looped over all pairs, see example.}
 \item{case}{index of case subjects corresponding to columns in "train".} 
 \item{control}{control index of control subjects corresponding to columns in "train".} 
