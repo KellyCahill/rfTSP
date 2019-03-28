@@ -20,3 +20,7 @@
 \description{
   P value selection criteria for optimal number of k TSPs
   } 
+
+\author{ 
+Kelly Cahill, Masaki Lin, Silvia Liu 
+}
