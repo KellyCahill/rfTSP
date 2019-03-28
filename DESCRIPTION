@@ -5,7 +5,7 @@ Version: 1.0
 Date: 2019-03-28
 Author: Kelly Cahill
 Maintainer: Kelly Cahill <kmc152@pitt.edu>
-Depends: RandomForest, truncnorn, doParallel, foreach 
+Depends: RandomForest, truncnorm, doParallel, foreach 
 Description: Selects relevant gene pairs to be used in robust binary and multi-class prediction
 License: GPL-3.0
 RoxygenNote: 6.0.1
