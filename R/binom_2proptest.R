@@ -1,6 +1,6 @@
 #binomial 2 prop test 
 #returns p-value strength of pair
-binom.p.dist<-function(j, data, N, controls, case, ind){
+binom_2proptest<-function(j, data, N, controls, case, ind){
   p.control<-c()
   p.case<-c()   
   for(i in 1:N){
