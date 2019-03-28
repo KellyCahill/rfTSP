@@ -8,13 +8,13 @@
 getKtsp(train, Y, k)
 }
 \arguments{
- \item{list1}{train - training data, gene by sample} 
- \item{list2}{Y - class label for subjects, must be a numeric vector or factor} 
-  \item{list3}{k - number of k tsps to be selected, can be arbitrary or selected via cross validation or p-value detection} 
+ \item{train}{training data, gene by sample} 
+ \item{Y}{class label for subjects, must be a numeric vector or factor} 
+  \item{k}{number of k tsps to be selected, can be arbitrary or selected via cross validation or p-value detection} 
   }
   
   \value{ 
-   \item{list1}{tsp}{a matrix of gene indeces for each top scoring pair corresponding to the input train matrix} 
+   \item{tsp}{a matrix of gene indeces for each top scoring pair corresponding to the input train matrix} 
    }
  \description{ 
  A function that to rank pairs of genes to return the top k pairs of genes
