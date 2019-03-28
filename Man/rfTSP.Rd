@@ -62,6 +62,20 @@ getKtsp(train, Y, k)
 A function that dichotomizes an expression matrix into 0 and 1 values, according to the observed TSP pattern
 } 
 
+\usage{ 
+  binom_2proptest(j, train, N, controls, case, ind) 
+  } 
+ \arguments{ 
+   \item{list1}(ind- a matrix consisting of 2 columns and p rows of gene pairs for all gene pairs (not just those returned by getKtsp) } 
+    \item{list2}{j - the gene pair index for the pair for a p-value to be calculated. Will be looped over all pairs (see example)}
+    \item{list3}{case - index of case subjects corresponding to columns in "train"} 
+     \item{list4}{control - index of control subjects corresponding to columns in "train"} 
+     \item{list5}{N - total number of training subjects, should equal number of columns in train} 
+   } 
+ \value{ 
+   \item{p-value of TSP pattern intensity for each gene pair} 
+   }
+    
 \examples{ 
 Gnull=900
 Gsig=100
@@ -73,7 +87,17 @@ train<-DAT$Xtrain
 test<-DAT$Xtest
 Y<-DAT$Ytrain
 true<-DAT$Ytest
-tsp<-getKtsp(train, Y, k = 20) 
+N<-length(Y)
+controls<-which(Y == "1") 
+case<-which(Y == "2")
+ind<-t(combn(nrow(train), 2))
+ 
+  
+p<-sapply(1:nrow(ind), binom_2proptest{x, train, N, controls, case, ind}) 
+  
+k<-length(which(p < .005)) 
+    
+tsp<-getKtsp(train, Y, k) 
 
 dichotomized_train<-data_transform(train, tsp) 
 dichotomized_test<-data_transform(test, tsp) 
