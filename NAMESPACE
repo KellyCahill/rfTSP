@@ -3,5 +3,5 @@
 
 export(simu.multi)
 export(getKtsp) 
-export(binom_2protest) 
+export(binom_2proptest) 
 export(data_transform)
