@@ -7,14 +7,14 @@
   binom_2proptest(j, train, N, controls, case, ind) 
   } 
  \arguments{ 
-   \item{list1}(ind- a matrix consisting of 2 columns and p rows of gene pairs for all gene pairs (not just those returned by getKtsp) } 
-    \item{list2}{j - the gene pair index for the pair for a p-value to be calculated. Will be looped over all pairs (see example)}
-    \item{list3}{case - index of case subjects corresponding to columns in "train"} 
-     \item{list4}{control - index of control subjects corresponding to columns in "train"} 
-     \item{list5}{N - total number of training subjects, should equal number of columns in train} 
+   \item{ind}(a matrix consisting of 2 columns and p rows of gene pairs for all gene pairs (not just those returned by getKtsp) } 
+    \item{j}{the gene pair index for the pair for a p-value to be calculated. Will be looped over all pairs (see example)}
+    \item{case}{index of case subjects corresponding to columns in "train"} 
+     \item{control}{control index of control subjects corresponding to columns in "train"} 
+     \item{N}{N total number of training subjects, should equal number of columns in train} 
    } 
  \value{ 
-   \item{p-value of TSP pattern intensity for each gene pair} 
+   \item{pvalue}{rigorous test of TSP pattern intensity for each gene pair} 
    }
     
 \description{
