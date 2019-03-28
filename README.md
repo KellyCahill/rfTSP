@@ -7,7 +7,7 @@ This is an R package for robust binary/multi classification and feature selectio
 * library(doParallel) 
 * registerDoParallel()
 * library(foreach) 
-* library(truncnorn)
+* library(truncnorm)
 
 ## Install this package from github 
 * in R console: 
