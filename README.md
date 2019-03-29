@@ -48,7 +48,7 @@ tsp<-getKtsp(train, Y, k)
 dichotomized_train<-data_transform(train, tsp) 
 dichotomized_test<-data_transform(test, tsp) 
 ##Assumes training and testing have the same genes in the same order
-fit<-randomForest(as.factor(Y)!., data = dichotomized_train, ntree = 500, replace = FALSE) 
+fit<-randomForest(as.factor(Y)~., data = dichotomized_train, ntree = 500, replace = FALSE) 
 predict_label<-predict(fit, newdata = dichotomized_test, type = "response") 
 error<-length(which(predict_label !=true ))/length(true)
 
