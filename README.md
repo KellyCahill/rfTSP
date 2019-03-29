@@ -36,7 +36,10 @@ case<-which(Y == "2")
 ind<-t(combn(nrow(train), 2))
  
   
-p<-sapply(1:nrow(ind), binom_2proptest(x, train, N, controls, case, ind)) 
+p<-c()
+for(j in 1:nrow(ind)){
+  p[j]<-binom_2proptest(j, data = train, N = N, controls =  controls, case = case, ind = ind)
+}
   
 k<-length(which(p < .005)) 
     
